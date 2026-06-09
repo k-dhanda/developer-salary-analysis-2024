@@ -2,7 +2,7 @@
 
 > A data science analysis of the Stack Overflow Developer Survey 2024 — exploring salary predictors, the remote work premium, and ML-based compensation forecasting.
 
-📖 **[Read the Blog Post](https://k-dhanda.github.io/ai-udacity/)** | 🔗 **[View Notebook](so_survey_salary_analysis.ipynb)**
+📖 **[Read the Blog Post](https://k-dhanda.github.io/developer-salary-analysis-2024/)** | 🔗 **[View Notebook](so_survey_salary_analysis.ipynb)**
 
 ---
 
@@ -88,7 +88,7 @@ of experience is worth ~$30–40k more than any single structural change.
 pip install pandas numpy matplotlib seaborn scikit-learn scipy jupyter
 
 # Clone repo
-git clone https://github.com/k-dhanda/ai-udacity.git
+git clone https://github.com/k-dhanda/developer-salary-analysis-2024.git
 cd ai-udacity
 
 # Launch notebook (downloads data automatically on first run)

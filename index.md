@@ -33,7 +33,7 @@ Here's what the data says.
 
 The distribution is wide — from $25k for entry-level to $475k for senior engineers at top tech companies. Most developers cluster between $80k and $200k.
 
-![Salary distribution histogram and box plot](https://raw.githubusercontent.com/k-dhanda/ai-udacity/main/images/plot_00.png)
+![Salary distribution histogram and box plot](https://raw.githubusercontent.com/k-dhanda/developer-salary-analysis-2024/main/images/plot_00.png)
 
 *The salary distribution is right-skewed: most developers earn $80k–$180k, with a long tail of high earners above $250k.*
 
@@ -43,7 +43,7 @@ The distribution is wide — from $25k for entry-level to $475k for senior engin
 
 The single most powerful predictor of salary is **years of professional coding experience** — accounting for **43.8% of the model's predictive power**, more than education, company size, and developer role combined.
 
-![Median salary by years of professional experience](https://raw.githubusercontent.com/k-dhanda/ai-udacity/main/images/plot_01.png)
+![Median salary by years of professional experience](https://raw.githubusercontent.com/k-dhanda/developer-salary-analysis-2024/main/images/plot_01.png)
 
 *Salary rises steeply in the first 10 years, then plateaus. The sharpest gains happen early in your career.*
 
@@ -69,13 +69,13 @@ This finding surprised even veteran data scientists when it first appeared in 20
 
 Remote developers earn **41% more** than in-person developers at the median. The gap is statistically significant (Kruskal-Wallis p < 0.001).
 
-![Remote work salary comparison bar chart](https://raw.githubusercontent.com/k-dhanda/ai-udacity/main/images/plot_02.png)
+![Remote work salary comparison bar chart](https://raw.githubusercontent.com/k-dhanda/developer-salary-analysis-2024/main/images/plot_02.png)
 
 *Remote workers consistently out-earn their in-person peers across all experience levels.*
 
 The likely explanation: remote-first companies — distributed tech startups, cloud-native scale-ups, open-source-driven firms — pay at or above market rates to attract top talent regardless of location. In-person roles concentrate in industries like finance, healthcare IT, and consulting where overall pay scales are lower.
 
-![Remote premium interaction with experience level](https://raw.githubusercontent.com/k-dhanda/ai-udacity/main/images/plot_03.png)
+![Remote premium interaction with experience level](https://raw.githubusercontent.com/k-dhanda/developer-salary-analysis-2024/main/images/plot_03.png)
 
 *The remote premium narrows at very senior experience levels (15+ years), where in-person leadership and executive roles begin to catch up.*
 
@@ -91,11 +91,11 @@ The model (Gradient Boosting Regressor, tuned via GridSearchCV) achieves:
 - **Cross-validation R² = 0.229 ± 0.016** (5-fold)
 - **MAE ≈ $44,026** — predictions are typically within ±$44k of actual salary
 
-![Actual vs predicted scatter plot and residuals](https://raw.githubusercontent.com/k-dhanda/ai-udacity/main/images/plot_04.png)
+![Actual vs predicted scatter plot and residuals](https://raw.githubusercontent.com/k-dhanda/developer-salary-analysis-2024/main/images/plot_04.png)
 
 *The model captures broad salary trends well but struggles with outliers — particularly very high earners above $300k.*
 
-![Cross-validation scores across 5 folds](https://raw.githubusercontent.com/k-dhanda/ai-udacity/main/images/plot_05.png)
+![Cross-validation scores across 5 folds](https://raw.githubusercontent.com/k-dhanda/developer-salary-analysis-2024/main/images/plot_05.png)
 
 *R² is consistent across all 5 folds (0.213–0.245), confirming the model generalises and is not overfitting.*
 
@@ -105,7 +105,7 @@ An R² of 0.25 is actually solid for salary prediction. Salary data is inherentl
 
 ## Feature Importance: What the Model Values Most
 
-![Feature importance bar chart for all model inputs](https://raw.githubusercontent.com/k-dhanda/ai-udacity/main/images/plot_06.png)
+![Feature importance bar chart for all model inputs](https://raw.githubusercontent.com/k-dhanda/developer-salary-analysis-2024/main/images/plot_06.png)
 
 *Top 3 features account for nearly 80% of predictive power. Experience alone drives almost half.*
 
@@ -126,7 +126,7 @@ The top predictors ranked:
 
 I modelled a specific scenario: a back-end developer, 8 years of experience, Master's degree, mid-size company (500–1,000 employees), uses AI tools.
 
-![Salary prediction comparison across scenarios](https://raw.githubusercontent.com/k-dhanda/ai-udacity/main/images/plot_07.png)
+![Salary prediction comparison across scenarios](https://raw.githubusercontent.com/k-dhanda/developer-salary-analysis-2024/main/images/plot_07.png)
 
 *Predicted salaries for the same developer under different work arrangements and experience levels.*
 
@@ -140,7 +140,7 @@ The remote premium is real, but the larger opportunity is **gaining experience**
 
 ## Bonus: Education × Role Salary Heatmap
 
-![Education level vs developer type salary heatmap](https://raw.githubusercontent.com/k-dhanda/ai-udacity/main/images/plot_08.png)
+![Education level vs developer type salary heatmap](https://raw.githubusercontent.com/k-dhanda/developer-salary-analysis-2024/main/images/plot_08.png)
 
 *Engineering Managers and Cloud/ML Engineers command the highest salaries regardless of education level. At senior roles, the education premium nearly disappears.*
 
@@ -166,6 +166,6 @@ This analysis follows the CRISP-DM process:
 - **Modelling:** GradientBoostingRegressor; hyperparameters tuned via GridSearchCV
 - **Evaluation:** R² = 0.247 (test), MAE = $44k; cross-validated for stability
 
-**Full code:** [github.com/k-dhanda/ai-udacity](https://github.com/k-dhanda/ai-udacity)
+**Full code:** [github.com/k-dhanda/developer-salary-analysis-2024](https://github.com/k-dhanda/developer-salary-analysis-2024)
 
 **Data source:** [Stack Overflow Developer Survey 2024](https://survey.stackoverflow.co/)
