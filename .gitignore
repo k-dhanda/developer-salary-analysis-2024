@@ -1,0 +1,6 @@
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+*.zip
+so_survey_2024.csv
+.DS_Store
